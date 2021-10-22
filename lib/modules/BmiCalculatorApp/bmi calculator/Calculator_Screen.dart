@@ -1,6 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:udemy_fluttter/modules/calculator_result/Calculator_Result_Screen.dart';
+import 'package:udemy_fluttter/modules/BmiCalculatorApp/calculator_result/Calculator_Result_Screen.dart';
 import 'package:udemy_fluttter/shared/components/components.dart';
 
 class CalculatorBmi extends StatefulWidget {

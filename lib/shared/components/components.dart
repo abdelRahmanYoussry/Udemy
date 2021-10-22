@@ -1,6 +1,6 @@
 import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
 import 'package:flutter/material.dart';
-import 'package:udemy_fluttter/modules/webview/web_view.dart';
+import 'package:udemy_fluttter/modules/NewsApp/webview/web_view.dart';
 import 'package:udemy_fluttter/shared/todo_cubit/cubit.dart';
 
 Widget defaultButton({

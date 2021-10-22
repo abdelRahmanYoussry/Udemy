@@ -2,9 +2,9 @@ import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sqflite/sqflite.dart';
-import 'package:udemy_fluttter/modules/archived/archived_screen.dart';
-import 'package:udemy_fluttter/modules/tasks/tasks_screen.dart';
-import 'package:udemy_fluttter/modules/todo/todoscreen.dart';
+import 'package:udemy_fluttter/modules/Donetasks/todoscreen.dart';
+import 'package:udemy_fluttter/modules/ToDoApp/archivedTasks/archived_screen.dart';
+import 'package:udemy_fluttter/modules/ToDoApp/tasks/tasks_screen.dart';
 import 'package:udemy_fluttter/shared/network/local/cash_helper.dart';
 import 'package:udemy_fluttter/shared/todo_cubit/states.dart';
 

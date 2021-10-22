@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:udemy_fluttter/modules/search/Search.dart';
+import 'package:udemy_fluttter/modules/NewsApp/search/Search.dart';
 import 'package:udemy_fluttter/shared/components/components.dart';
 import 'package:udemy_fluttter/shared/network/remote/dio_helper.dart';
 import 'package:udemy_fluttter/shared/news_cubit/news_cubit.dart';

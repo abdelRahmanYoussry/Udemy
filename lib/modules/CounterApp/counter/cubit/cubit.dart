@@ -1,6 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:udemy_fluttter/modules/counter/cubit/states.dart';
+import 'package:udemy_fluttter/modules/CounterApp/counter/cubit/states.dart';
+
 
 class CubitCounter extends Cubit<CounterStates>{
   CubitCounter(initialState) : super(CounterInitialState());

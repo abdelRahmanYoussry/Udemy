@@ -1,10 +1,10 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:udemy_fluttter/modules/NewsApp/business/business_screen.dart';
+import 'package:udemy_fluttter/modules/NewsApp/science/science_screen.dart';
+import 'package:udemy_fluttter/modules/NewsApp/sports/sports_screen.dart';
 import 'package:udemy_fluttter/modules/SettingsScreen/Settings_screen.dart';
-import 'package:udemy_fluttter/modules/business/business_screen.dart';
-import 'package:udemy_fluttter/modules/science/science_screen.dart';
-import 'package:udemy_fluttter/modules/sports/sports_screen.dart';
 import 'package:udemy_fluttter/shared/network/remote/dio_helper.dart';
 import 'news_state.dart';
 
