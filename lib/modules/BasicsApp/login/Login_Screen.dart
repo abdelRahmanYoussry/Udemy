@@ -79,7 +79,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     height: 20,
                   ),
                   defaultButton(
-                      function: () {
+                      onTap: () {
                         if (formKey.currentState!.validate()) {
                           print(emailControl.text);
                           print(passwordControl.text);
@@ -92,7 +92,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   defaultButton(
                       radius: 20,
                       backGroundColor: Colors.red,
-                      function: () {
+                      onTap: () {
                         if (formKey.currentState!.validate()) {
                           print(emailControl.text);
                           print(passwordControl.text);

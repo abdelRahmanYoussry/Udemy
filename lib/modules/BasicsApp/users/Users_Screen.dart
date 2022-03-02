@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:udemy_fluttter/models/users%20model.dart';
+import 'package:udemy_fluttter/models/UserModel/users%20model.dart';
 class UsersScreen extends StatelessWidget {
   List<UserModel>model=[
     UserModel(id: 1,name:

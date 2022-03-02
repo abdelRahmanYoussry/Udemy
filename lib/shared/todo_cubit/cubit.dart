@@ -2,7 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sqflite/sqflite.dart';
-import 'package:udemy_fluttter/modules/Donetasks/todoscreen.dart';
+import 'package:udemy_fluttter/modules/ToDoApp/DoneTasks/todoscreen.dart';
 import 'package:udemy_fluttter/modules/ToDoApp/archivedTasks/archived_screen.dart';
 import 'package:udemy_fluttter/modules/ToDoApp/tasks/tasks_screen.dart';
 import 'package:udemy_fluttter/shared/network/local/cash_helper.dart';
@@ -121,7 +121,9 @@ class TodoCubit extends Cubit<TodoStatesClass>{
   void changeDarkMode({bool? fromShared})
   {
    if(fromShared!=null){
-     isDark=fromShared;
+
+   isDark=fromShared;
+
      emit(ChangeAppMode());
    }
    else
