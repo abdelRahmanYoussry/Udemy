@@ -1,5 +1,5 @@
 #  myProjects
-1.Basuc socialApp using(firebase) contains features  (Authentication,profile, posts,chat)
+1.Basic socialApp using(firebase) contains features  (Authentication,profile, posts,chat)
 
 
 
