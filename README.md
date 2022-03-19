@@ -8,7 +8,6 @@
 
 3.NewsApp(using Api) in this app (Egyptian and International news,Economy,poltical and Science news ,DarkMode)
 
-
 4. ToDOApp(Using local deatabase) (list of Reminders ,notes , has a three parts (done, notdone,archived)
 
 5.Small apps( Counter  and Bmi Calculater) 
