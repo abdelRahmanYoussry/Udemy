@@ -1,4 +1,4 @@
-# in this projects you will find
+#  myProjects
 1.socialApp using(firebase) in this app (Register,Login,Authentication(with email),Profile(with edit info),posts(add and remove,Like,Comments),chat(with photos)
 
 
