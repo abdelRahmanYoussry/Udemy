@@ -3,10 +3,10 @@
 
 
 
-2.ShopApp(using Api) in this app (Register ,login, Product(post,update,delete,Like) , Profile(post,update)      
+2.Basic ShopApp(using Api) contains features (Register ,login, cart,Explore Products , Profile)      
 
 
-3.NewsApp(using Api) in this app (Egyptian and International news,Economy,poltical and Science news ,DarkMode)
+3.NewsApp(using Api) contains features (Explore Egyptian and International news,Economy,poltical and Science news ,DarkMode)
 
 4.ToDOApp(Using local deatabase) (list of Reminders ,notes , has a three parts (done, notdone,archived)
 
