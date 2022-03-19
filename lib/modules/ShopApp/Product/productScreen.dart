@@ -20,13 +20,13 @@ class ProductScreen extends StatelessWidget {
       {
         if(state is ShopSuccessFavouritesState)
         {
-          if(!state.model.status)
+          if(!state.model.status!)
           {
-          showToast(text: state.model.message, state: ToastState.Error);
+          showToast(text: state.model.message!, state: ToastState.Error);
 
           }
           else{
-            showToast(text: state.model.message, state: ToastState.Success);
+            showToast(text: state.model.message!, state: ToastState.Success);
           }
         }
       },

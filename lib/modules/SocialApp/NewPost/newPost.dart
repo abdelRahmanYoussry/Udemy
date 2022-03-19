@@ -25,10 +25,12 @@ class NewPostScreen extends StatelessWidget {
                   defaultTextButton(
                       onTap: () {
                         var now=DateTime.now();
+                        String formattedDate = DateFormat('yyyy-MM-dd – kk:mm'). format(now);
+
                         if(SocialCubit.get(context).postImageFile==null)
                         {
                           SocialCubit.get(context).createPost(
-                              dateTime: now.toString(),
+                              dateTime: formattedDate,
                               text: textController.text);
 
                         }else{

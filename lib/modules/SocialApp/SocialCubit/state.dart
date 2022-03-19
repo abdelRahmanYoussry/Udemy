@@ -13,6 +13,17 @@ class SocialGetUserErrorState extends SocialStates{
   final String error;
   SocialGetUserErrorState(this.error);
 }
+
+class SocialGetAllUsersLoadingState extends SocialStates{}
+
+class SocialGetAllUsersSuccessState extends SocialStates{}
+
+class SocialGetAllUsersErrorState extends SocialStates{
+  final String error;
+  SocialGetAllUsersErrorState(this.error);
+}
+
+
 class SocialChangeNavBarState extends SocialStates {}
 
 class SocialNewPostState extends SocialStates {}
@@ -60,6 +71,7 @@ class SocialLikePostsErrorState extends SocialStates{
   final String error;
   SocialLikePostsErrorState(this.error);
 }
+
 class SocialCreateCommentPostsLoadingState extends SocialStates{}
 class SocialCreateCommentPostsSuccessState extends SocialStates{}
 class SocialCreateCommentPostsErrorState extends SocialStates{
@@ -68,9 +80,46 @@ class SocialCreateCommentPostsErrorState extends SocialStates{
 }
 
 class SocialGetCommentPostsLoadingState extends SocialStates{}
-class SocialGetCommentPostsSuccessState extends SocialStates{}
+class SocialGetCommentPostsSuccessState extends SocialStates{
+  late String insidePostId;
+  SocialGetCommentPostsSuccessState(this.insidePostId);
+}
 class SocialGetCommentPostsErrorState extends SocialStates{
   final String error;
   SocialGetCommentPostsErrorState(this.error);
+
+
 }
 
+
+class SocialCreateChatUsersLoadingState extends SocialStates{}
+class SocialCreateChatUsersSuccessState extends SocialStates{}
+class SocialCreateChatUsersErrorState extends SocialStates{
+  final String error;
+  SocialCreateChatUsersErrorState(this.error);
+}
+
+class SocialGetChatUsersLoadingState extends SocialStates{}
+class SocialGetChatUsersSuccessState extends SocialStates{
+
+}
+class SocialGetChatUsersErrorState extends SocialStates{
+  final String error;
+  SocialGetChatUsersErrorState(this.error);
+
+
+}
+
+class SocialLogoutLoadingState extends SocialStates{}
+class SocialLogoutSuccessState extends SocialStates
+{
+
+
+}
+class SocialLogoutErrorState extends SocialStates{
+  final String error;
+  SocialLogoutErrorState(this.error);
+}
+
+class SocialMessageImageSuccessState extends SocialStates{}
+class SocialMessageImageErrorState extends SocialStates{}

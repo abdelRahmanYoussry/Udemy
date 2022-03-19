@@ -30,7 +30,7 @@ FirebaseAuth.instance.createUserWithEmailAndPassword(
       uid: value.user!.uid);
 }
 ).catchError((error){
-  emit(SocialRegisterErrorState(error));
+  emit(SocialRegisterErrorState(error.toString()));
 });
   }
 

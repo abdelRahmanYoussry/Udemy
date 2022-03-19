@@ -1,7 +1,9 @@
 
 import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:intl/intl.dart';
 import 'package:udemy_fluttter/modules/SocialApp/SocialCubit/cubit.dart';
 import 'package:udemy_fluttter/modules/SocialApp/SocialCubit/cubit.dart';
 import 'package:udemy_fluttter/modules/SocialApp/SocialCubit/state.dart';
@@ -14,8 +16,7 @@ class CommentScreen extends StatelessWidget {
       listener: (context, state) {
       },
       builder: (context, state) {
-
-        var cubit=SocialCubit.get(context);
+        var commentController=TextEditingController();
         return Scaffold(
           appBar: AppBar(
             title: Text('Comments'),
@@ -23,20 +24,64 @@ class CommentScreen extends StatelessWidget {
               icon: Icon(Icons.arrow_back_ios),
               onPressed: (){
                 Navigator.pop(context);
+                SocialCubit.get(context).getPost();
               },
             ),
           ),
-         body:ConditionalBuilder(
-           condition:SocialCubit.get(context).commentModelList.length>0 ,
-           builder:(context)=>ListView.separated(
-               itemBuilder: (context,index)=>buildCommentList(SocialCubit.get(context).commentModelList[index], context,index),
-               separatorBuilder:  (context,index)=>SizedBox(
-                 height: 5,
+         body:Column(
+           // mainAxisSize: MainAxisSize.min,
+           children: [
+             Expanded(
+               child: ConditionalBuilder(
+                 condition:SocialCubit.get(context).commentModelList.length>0 ,
+                 builder:(context)=>ListView.separated(
+                     shrinkWrap: true,
+                     scrollDirection: Axis.vertical,
+                     physics: BouncingScrollPhysics(),
+                     itemBuilder: (context,index)=>buildCommentList(SocialCubit.get(context).commentModelList[index], context,index),
+                     separatorBuilder:  (context,index)=>SizedBox(
+                       height: 5,
+                     ),
+                     itemCount:  SocialCubit.get(context).commentModelList.length),
+                 fallback:(context)=>Center(child: CircularProgressIndicator(),) ,
                ),
-               itemCount:  SocialCubit.get(context).commentModelList.length)
-           ,
-           fallback:(context)=>Center(child: CircularProgressIndicator(),) ,
-         ) ,
+             ),
+             Expanded(
+               child: Container(
+                 padding: EdgeInsets.only(left: 10,right: 10,top: 10),
+                 child: TextFormField(
+                   autofocus: true,
+                   controller: commentController,
+                   decoration:InputDecoration(
+                       focusedBorder:OutlineInputBorder(
+                           borderRadius: BorderRadius.circular(20),
+                           borderSide: BorderSide(
+                               color: Colors.blue,
+                               width: 2
+                           )
+                       ) ,
+                       hintText: 'Write a Comment',
+                       hintStyle: Theme.of(context).textTheme.caption!.copyWith(
+                       )
+                   ) ,
+                   onFieldSubmitted: (value){
+                     DateTime now = DateTime. now();
+                     String formattedDate = DateFormat('yyyy-MM-dd – kk:mm'). format(now);
+                     // SocialGetCommentPostsSuccessState(SocialCubit.get(context).newPostId.toString());
+                     print( SocialCubit.get(context).newPostId.toString()+' nnew  post id  ');
+                     SocialCubit.get(context).createComment(
+                         comment: commentController.text,
+                         dataTime:formattedDate.toString(),
+                         postId: SocialCubit.get(context).newPostId.toString());
+                     print(commentController.text+'this is value');
+                     FocusScope.of(context).unfocus();
+                      commentController.clear();
+                   },
+                 ),
+               ),
+             ),
+           ],
+         )
         );
       },
     );
@@ -47,15 +92,12 @@ class CommentScreen extends StatelessWidget {
     return Container(
      // height: MediaQuery.of(context).size.height/2,
       child: Container(
-        height: 100,
+        height: 80,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
               Row(children: [
-                Container(
-                  color: Colors.amber,
-                ),
                 CircleAvatar(
                   radius: 25,
                   backgroundImage:NetworkImage('${cmodel.image}'),
@@ -96,23 +138,12 @@ class CommentScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(
-                  width: 20,
-                ),
-                IconButton(
-                  icon: (Icon(Icons.more_vert)),
-                  onPressed: (){},
-                ),
-                // Text(model.text!,
-                //   style: Theme.of(context).textTheme.subtitle1,
-                // ),
-
-              ],),
             ],
           ),
-        ),
+
+  ]),
       ),
-    );
+    ));
 
   }
 }

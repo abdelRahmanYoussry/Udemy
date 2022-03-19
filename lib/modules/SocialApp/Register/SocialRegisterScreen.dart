@@ -43,7 +43,7 @@ class SocialRegisterScreen extends StatelessWidget {
                               ),
                             ),
                             Text('Register now communicate with the World ',
-                              style: Theme.of(context).textTheme.headline!.copyWith(color: Colors.grey
+                              style: Theme.of(context).textTheme.bodyText1!.copyWith(color: Colors.grey
                               ),
                             ),
                             SizedBox(

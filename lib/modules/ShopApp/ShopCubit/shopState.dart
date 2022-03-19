@@ -28,7 +28,7 @@ class ShopChangeFavouritesState extends ShopState{}
 
 class ShopSuccessFavouritesState extends ShopState
 {
-  final ChangeFavouritesModel model;
+  final ChangeFavoritesModel model;
   ShopSuccessFavouritesState(this.model);
 }
 

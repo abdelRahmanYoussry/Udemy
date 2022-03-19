@@ -6,8 +6,12 @@ import 'package:intl/intl.dart';
 import 'package:udemy_fluttter/modules/SocialApp/NewPost/newPost.dart';
 import 'package:udemy_fluttter/modules/SocialApp/SocialCubit/cubit.dart';
 import 'package:udemy_fluttter/modules/SocialApp/SocialCubit/state.dart';
+import 'package:udemy_fluttter/modules/SocialApp/SocialLoginCubit/cubit.dart';
 import 'package:udemy_fluttter/shared/components/components.dart';
 import 'package:udemy_fluttter/styles/styles.dart';
+
+import '../../../shared/network/local/cash_helper.dart';
+import '../login/social_login.dart';
 
 class SocialLayout extends StatelessWidget {
   @override
@@ -26,7 +30,17 @@ class SocialLayout extends StatelessWidget {
             title: Text(cubit.titles[cubit.currentIndex]),
           actions: [
             IconButton(icon: Icon(IconBroken.Notification),onPressed: (){},),
-            IconButton(icon: Icon(IconBroken.Search),onPressed: (){},)
+            IconButton(icon: Icon(IconBroken.Search),onPressed: (){},),
+            IconButton(icon: Icon(IconBroken.Logout),onPressed: (){
+              //  CashHelper.removeData(key: 'uid').then((value) {
+              //   if(value)
+              //     navigateAndFinish(context, SocialLogin());
+              // });
+
+               SocialCubit.get(context).loginOut(context);
+
+
+            },)
           ],
           ),
           body:cubit.screens[cubit.currentIndex],

@@ -59,7 +59,7 @@ class ShopRegisterScreen extends StatelessWidget {
                               ),
                             ),
                             Text('Register now to Browse to Our Cool App',
-                              style: Theme.of(context).textTheme.headline!.copyWith(color: Colors.grey
+                              style: Theme.of(context).textTheme.headline1!.copyWith(color: Colors.grey
                               ),
                             ),
                             SizedBox(

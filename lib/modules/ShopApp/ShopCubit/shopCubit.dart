@@ -9,6 +9,7 @@ import 'package:udemy_fluttter/modules/SettingsScreen/Settings_screen.dart';
 import 'package:udemy_fluttter/modules/ShopApp/Category/categoryScreen.dart';
 import 'package:udemy_fluttter/modules/ShopApp/Favourite/favouriteScreen.dart';
 import 'package:udemy_fluttter/modules/ShopApp/Product/productScreen.dart';
+import 'package:udemy_fluttter/modules/ShopApp/Settings/SettingsScreen.dart';
 import 'package:udemy_fluttter/modules/ShopApp/Settings/settingsScreen.dart';
 import 'package:udemy_fluttter/modules/ShopApp/ShopCubit/shopState.dart';
 import 'package:udemy_fluttter/shared/components/constans.dart';
@@ -24,7 +25,7 @@ List<Widget> bottomScreens=[
   ProductScreen(),
   CategoryScreen(),
   FavouriteScreen(),
-  SettingsScreen(),
+
 ];
 
 void changeNavBar(int index){
@@ -73,7 +74,7 @@ void getHomeData(){
     });
   }
 
-  ChangeFavouritesModel? changeFavouritesModel;
+  ChangeFavoritesModel? changeFavouritesModel;
   void changeFavourites(int productId)
   {
     favourite[productId] = !favourite[productId]!;
@@ -85,8 +86,8 @@ void getHomeData(){
         } ,
         token: token
     ).then((value) {
-      changeFavouritesModel=ChangeFavouritesModel.fromJason(value.data);
-      if(!changeFavouritesModel!.status){
+      changeFavouritesModel=ChangeFavoritesModel.fromJson(value.data);
+      if(!changeFavouritesModel!.status!){
         favourite[productId] = !favourite[productId]!;
       }else{
         getFavouriteData();

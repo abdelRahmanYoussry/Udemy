@@ -2,8 +2,10 @@ import 'package:conditional_builder_null_safety/conditional_builder_null_safety.
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:udemy_fluttter/models/SocialAppModel/socialUserModel.dart';
 import 'package:udemy_fluttter/modules/SocialApp/Layout/SocialLayout.dart';
 import 'package:udemy_fluttter/modules/SocialApp/Register/SocialRegisterScreen.dart';
+import 'package:udemy_fluttter/modules/SocialApp/SocialCubit/cubit.dart';
 import 'package:udemy_fluttter/modules/SocialApp/SocialLoginCubit/cubit.dart';
 import 'package:udemy_fluttter/modules/SocialApp/SocialLoginCubit/state.dart';
 import 'package:udemy_fluttter/shared/components/components.dart';
@@ -28,10 +30,12 @@ class SocialLogin extends StatelessWidget {
                 key: 'uid',
                 value:state.uid
             ).then((value) {
-              print(state.uid);
+              print(state.uid+' this is uid');
               uid=state.uid;
+              SocialCubit.get(context).getUserData();
               navigateAndFinish(context, SocialLayout());
             });
+            print(uid!+' this is uid2');
           }
         },
         builder: (context,state){
@@ -113,11 +117,21 @@ class SocialLogin extends StatelessWidget {
                               condition: state is! SocialLoginLoadingState,
                               builder:(context)=>defaultButton(
                                 onTap: (){
-                                  if(formKey.currentState!.validate())
-                                  {
+                                  if(formKey.currentState!.validate()) {
                                     SocialLoginCubit.get(context).userLogin(
                                         email: emailControl.text,
                                         password: passwordControl.text);
+
+                                    // if(uid!=SocialCubit.get(context).userModel!.uid){
+                                    //   SocialLoginCubit.get(context).userLogin(
+                                    //       email: emailControl.text,
+                                    //       password: passwordControl.text);
+                                    //
+                                    // }
+                                    // else
+                                    //   SocialCubit.get(context).getUserData();
+                                    // // SocialCubit.get(context).getPost();
+
                                   }
                                 },
                                 text: 'Login',),

@@ -6,8 +6,6 @@ class PostModel{
   late String ?text;
   late String ?postImage;
   //make a comment
-  late String ?comment;
-
   PostModel({
     this.name,
     this.dateTime,
@@ -16,7 +14,6 @@ class PostModel{
     this.image,
     this.postImage,
     //make a comment
-    this.comment,
   });
 
   PostModel.fromJson(Map<String,dynamic>json){
@@ -27,7 +24,6 @@ class PostModel{
     image=json['image'];
     postImage=json['postImage'];
     //make a comment
-    comment=json['comment'];
 
   }
 
@@ -39,9 +35,6 @@ class PostModel{
       'uid':uid,
       'image':image,
       'postImage':postImage,
-      //make a comment
-      'comment':comment,
-
     };
 
   }
