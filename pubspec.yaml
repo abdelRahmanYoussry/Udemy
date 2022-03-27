@@ -37,9 +37,21 @@ dependencies:
   hexcolor: ^2.0.5
   shared_preferences: ^2.0.5
   webview_flutter: ^2.0.3
+  smooth_page_indicator: ^0.3.0-nullsafety.0
+  fluttertoast: ^8.0.8
+  carousel_slider: ^4.0.0
+  image_picker: ^0.8.3+3
+
+  #firebase
+  firebase_core: ^1.0.3
+  firebase_auth: ^1.0.3
+  cloud_firestore: ^3.0.0
+  firebase_storage: ^10.0.4
+  firebase_messaging: ^11.2.5
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -67,10 +79,10 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+  fonts:
+    - family: IconBroken
+      fonts:
+        - asset: assets/fonts/icons.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
