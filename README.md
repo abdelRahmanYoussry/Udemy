@@ -1,4 +1,4 @@
-#  myProjects
+# complete udemy course 2022 
 1.Basic socialApp using(firebase) contains features  (Authentication,profile, posts,chat)
 
 
@@ -11,3 +11,5 @@
 4.ToDOApp(Using local deatabase) (list of Reminders ,notes , has a three parts (done, notdone,archived)
 
 5.Small apps( Counter  and Bmi Calculater) 
+
+6.All projects using bloc (Cubit)
