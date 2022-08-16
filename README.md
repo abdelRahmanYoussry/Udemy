@@ -1,11 +1,12 @@
 # complete udemy course 2022 
 
 
-<img src="https://media-exp2.licdn.com/dms/image/C4D22AQHwh4gL0kfcbw/feedshare-shrink_1280/0/1656771416832?e=1660176000&v=beta&t=eLyt0pd6d-TnNeGzzMYcsDbPIfumC9C4XFirLbsDlaE" width="400">  
 
+<p align="center">
+  <img src="https://media-exp1.licdn.com/dms/image/C4D22AQHwh4gL0kfcbw/feedshare-shrink_1280/0/1656771416832?e=1663804800&v=beta&t=k5wp412zQZCx26Cvq6E4VA3kI9PMxab6sFNX_XEfE_Q" title="hover text">
+</p>
 
 1.Basic socialApp using(firebase) contains features  (Authentication,profile, posts,chat)
-
 
 
 2.Basic ShopApp(using Api) contains features (Register ,login, cart,Explore Products , Profile)      
