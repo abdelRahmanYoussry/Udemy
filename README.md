@@ -1,16 +1,23 @@
-# udemy_fluttter
+# complete udemy course 2022 
 
-A new Flutter project.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+<p align="center">
+  <img src="https://media-exp1.licdn.com/dms/image/C4D22AQHwh4gL0kfcbw/feedshare-shrink_1280/0/1656771416832?e=1663804800&v=beta&t=k5wp412zQZCx26Cvq6E4VA3kI9PMxab6sFNX_XEfE_Q" title="hover text">
+</p>
 
-A few resources to get you started if this is your first Flutter project:
+1.Basic socialApp using(firebase) contains features  (Authentication,profile, posts,chat)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+2.Basic ShopApp(using Api) contains features (Register ,login, cart,Explore Products , Profile)      
+
+
+3.NewsApp(using Api) contains features (Explore Egyptian and International news,Economy,poltical and Science news ,DarkMode)
+
+4.ToDOApp(Using local deatabase) (list of Reminders ,notes , has a three parts (done, notdone,archived)
+
+5.Small apps( Counter  and Bmi Calculater) 
+
+6.All projects using bloc (Cubit)
+
+
