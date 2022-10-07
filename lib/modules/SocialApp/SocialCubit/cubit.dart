@@ -473,8 +473,6 @@ SettingsScreen(),
 
 }
 
-
-
   List<MessagesChatModel>messageModelList=[];
   void getMessages({required String receiverId,}){
     // emit(SocialGetChatUsersLoadingState());
@@ -495,8 +493,6 @@ SettingsScreen(),
     });
 
   }
-
-
 
 
   File? messageImageFile;

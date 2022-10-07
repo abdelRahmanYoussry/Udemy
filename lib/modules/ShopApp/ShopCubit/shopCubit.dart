@@ -5,7 +5,6 @@ import 'package:udemy_fluttter/models/ShopAppModel/changeFavouritesModel.dart';
 import 'package:udemy_fluttter/models/ShopAppModel/favouritesModel.dart';
 import 'package:udemy_fluttter/models/ShopAppModel/homeModel.dart';
 import 'package:udemy_fluttter/models/ShopAppModel/loginModel.dart';
-import 'package:udemy_fluttter/modules/SettingsScreen/Settings_screen.dart';
 import 'package:udemy_fluttter/modules/ShopApp/Category/categoryScreen.dart';
 import 'package:udemy_fluttter/modules/ShopApp/Favourite/favouriteScreen.dart';
 import 'package:udemy_fluttter/modules/ShopApp/Product/productScreen.dart';
