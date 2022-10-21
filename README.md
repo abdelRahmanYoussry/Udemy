@@ -3,7 +3,7 @@
 
 
 <p align="center">
-  <img src="https://media-exp1.licdn.com/dms/image/C4D22AQHwh4gL0kfcbw/feedshare-shrink_1280/0/1656771416832?e=1663804800&v=beta&t=k5wp412zQZCx26Cvq6E4VA3kI9PMxab6sFNX_XEfE_Q" title="hover text">
+  <img src="https://user-images.githubusercontent.com/92960112/197274954-04dba7e9-b10c-4fa3-a41e-20c96b896c5b.png" title="hover text">
 </p>
 
 1.Basic socialApp using(firebase) contains features  (Authentication,profile, posts,chat)
